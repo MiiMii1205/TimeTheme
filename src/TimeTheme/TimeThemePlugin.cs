@@ -208,13 +208,14 @@ public partial class TimeThemePlugin : BaseUnityPlugin
         }
     }
 
-#if DEBUG
     [ConsoleCommand]
     public static void SwitchTheme(bool toDay)
     {
         Instance.CheckSwitchTheme(toDay);
     }   
-    
+
+#if DEBUG
+
     [ConsoleCommand]
     public static void ShowTestHero()
     {
