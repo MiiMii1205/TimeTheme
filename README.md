@@ -4,9 +4,9 @@ A simple mod that changes the GUI color theme based on the in-game time of day.
 
 ## What does it do? ##
 
-At sunset, the GUI will gradually shift it's color to a darker, purpleish hue.
+At sunset, the GUI will gradually shift its color to a darker, purple-ish hue.
 
-Then at sunrise, or when crossing to a biome with no nights, it will switch back to it's vanilla colors.
+Then at sunrise, or when crossing to a biome with no nights, it will switch back to its vanilla colors.
 
 ## 🐛 Issues ##
 
