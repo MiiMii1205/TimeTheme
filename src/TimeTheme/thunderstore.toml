@@ -8,7 +8,7 @@ repository = "https://thunderstore.io"
 namespace = "OracleTeam"
 name = "TimeTheme"
 description = "Switches the UIs color palette when it becomes night/day."
-websiteUrl = "" # TODO: Add a link to your mod repository here (optional)
+websiteUrl = "https://github.com/MiiMii1205/TimeTheme"
 containsNsfwContent = false
 
 [package.dependencies]
