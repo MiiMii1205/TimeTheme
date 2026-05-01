@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.1] - 2026-05-01
+
+### Changed ###
+
+- Fixed issues with wrong colors being used when restoring the end result screen at day
+
 ## [0.2.0] - 2026-04-28
 
 ### Added ###

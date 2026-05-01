@@ -56,7 +56,7 @@ public partial class TimeThemePlugin : BaseUnityPlugin
         new(new Color(0.990566f, 0.9718761f, 0.9485137f, 1f),
             new Color(0.772549f, 0.4745098f, 0.9294118f, 1f)),
         new(new Color(0.7735849f, 0.7577726f, 0.7261481f, 1f),
-            new Color(0.772549f, 0.4745098f, 0.9294118f, 1f)),
+            new Color(0.5607843137254902f, 0.27058823529411763f, 0.7019607843137254f, 1f)),
         new(new Color(0.6289307f, 0.6142679f, 0.5438866f, 1f),
             new Color(0.4196078f, 0.1411765f, 0.5254902f, 1f)),
         new(new Color(0.9839351f, 1f, 0f, 1f),
@@ -105,9 +105,9 @@ public partial class TimeThemePlugin : BaseUnityPlugin
         new(new Color(0.7843137f, 0.7843137f, 0.7843137f, 1f),
             new Color(0.572549f, 0.2901961f, 0.7529412f, 1f)),
         new(new Color(1f, 0.629899f, 0f, 0.7686275f),
-            new Color(0.8470588f, 0.5882353f, 1f, 1f)),
+            new Color(0.8549019607843137f, 0.6f, 1f, 0.7686275f)),
         new(new Color(0.95686f, 1f, 0f, 0.7615f),
-            new Color(0.8470588f, 0.5882353f, 1f, 1f)),
+            new Color(1f, 0.8196078431372549f, 1f, 0.7615f) ),
     ];
 
     private static Tuple<Color, Color>[] m_dayNightButtonColors =
@@ -464,9 +464,13 @@ public partial class TimeThemePlugin : BaseUnityPlugin
 
         for (var i = 0; i < m_anims.Length; i++)
         {
+            if (!m_anims[i])
+            {
+                continue;
+            }
+            
             if (m_anims[i] is { } a)
             {
-                
                 var animatorName = a.runtimeAnimatorController.name.Replace("(Instance)", "").Replace("(Clone)", "");
                 
                 switch (animatorName)
@@ -645,6 +649,12 @@ public partial class TimeThemePlugin : BaseUnityPlugin
 
         for (var i = 0; i < m_graphs.Length; i++)
         {
+
+            if (!m_graphs[i])
+            {
+                continue;
+            }
+            
             var usedArray = m_dayNightColors;
             Tweener? t = null;
 
